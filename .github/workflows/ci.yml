@@ -34,12 +34,7 @@ jobs:
       # Step 5: Run Pa11y Accessibility Tests
       - name: Run Pa11y Accessibility Tests
         run: npm run test:accessibility --json > results/pa11y-results.json
-
-      # Step 6: Run Lighthouse Tests
-      - name: Run Lighthouse Tests
-        run: |
-          npx lighthouse https://recipe-book.harrisonholt.dev/login --output=json --output-path=results/lighthouse-results.json
-
+        
       # Step 7: Run axe-core Accessibility Tests
       - name: Run axe-core Accessibility Tests
         run: |

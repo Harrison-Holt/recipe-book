@@ -1,0 +1,39 @@
+name: CI Pipeline with Accessibility Testing
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  accessibility-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout The Code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set Up NodeJS
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Step 3: Install Dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run Accessibility Tests With Pa11y
+      - name: Run Pa11y Accessibility Tests
+        run: npm run test:accessibility --json > pa11y-results.json
+
+      # Step 5: Upload Pa11y Results As Artifacts 
+      - name: Upload Pa11y Results 
+        uses: actions/upload-artifact@v3
+        with:
+            name: pa11y-results 
+            path: pa11y-results.json

@@ -2,7 +2,7 @@
 import { AppBar, Toolbar, Typography, Paper, TextField, Box, Button } from '@mui/material'
 import { Link } from 'react-router-dom'   
 import Footer from './Footer.jsx'
-import kitchenBackground from '../assets/kitchen_background.jpg';
+import kitchenBackground from '../../public/assets/kitchen_background.jpg';
 
 const Register = () => {
 

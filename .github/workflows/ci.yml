@@ -1,4 +1,4 @@
-name: CI Pipeline with Comprehensive Testing
+name: CI Pipeline with Accessibility Testing
 
 on:
   push:
@@ -9,17 +9,17 @@ on:
       - master
 
 jobs:
-  accessibility-and-performance-test:
+  accessibility-test:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout Repository
+      # Step 1: Checkout the Code
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       # Step 2: Set Up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
@@ -31,18 +31,23 @@ jobs:
       - name: Run Pa11y Accessibility Tests
         run: npm run test:accessibility --json > results/pa11y-results.json
 
-      # Step 5: Run axe-core Accessibility Tests
+      # Step 5: Run Lighthouse Accessibility Tests
+      - name: Run Lighthouse Accessibility Audit
+        run: |
+          npx lighthouse https://recipe-book.harrisonholt.dev/login --output=json --output-path=results/lighthouse-results.json --only-categories=accessibility
+
+      # Step 6: Run axe-core Accessibility Tests
       - name: Run axe-core Accessibility Tests
         run: |
           npx axe https://recipe-book.harrisonholt.dev/login --save results/axe-results.json
-          
-      # Step 7: Zip All Results
-      - name: Archive All Test Results
+
+      # Step 7: Zip Accessibility Results
+      - name: Archive Accessibility Results
         run: zip -r results.zip results/
       
-      # Step 8: Upload Results as Artifact
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v4
+      # Step 8: Upload Accessibility Results as Artifact
+      - name: Upload Accessibility Results
+        uses: actions/upload-artifact@v3
         with:
-          name: comprehensive-test-results
+          name: accessibility-results
           path: results.zip

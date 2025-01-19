@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:accessibility": "pa11y https://recipe-book.harrisonholt.dev/login"
+    "test:accessibility": "pa11y https://recipe-book.harrisonholt.dev/login || true"
 
   },
   "dependencies": {

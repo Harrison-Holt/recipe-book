@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:accessibility": "pa11y https://recipe-book.harrisonholt.dev/login"
+
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -33,10 +35,5 @@
     "globals": "^15.14.0",
     "pa11y": "^8.0.0",
     "vite": "^6.0.5"
-  }, 
-  
-  "scripts": {
-    "test:accessibility": "pa11y "
   }
-  
 }

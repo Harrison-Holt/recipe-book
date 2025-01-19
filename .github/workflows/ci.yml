@@ -1,4 +1,4 @@
-name: CI Pipeline with Accessibility Testing
+name: CI Pipeline with Comprehensive Testing for All Pages
 
 on:
   push:
@@ -9,11 +9,11 @@ on:
       - master
 
 jobs:
-  accessibility-test:
+  accessibility-and-performance-test:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the Code
+      # Step 1: Checkout Repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -27,27 +27,31 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Run Pa11y Accessibility Tests
+      # Step 4: Create Results Directory
+      - name: Create Results Directory
+        run: mkdir -p results
+
+      # Step 5: Run Pa11y Accessibility Tests
       - name: Run Pa11y Accessibility Tests
         run: npm run test:accessibility --json > results/pa11y-results.json
 
-      # Step 5: Run Lighthouse Accessibility Tests
-      - name: Run Lighthouse Accessibility Audit
+      # Step 6: Run Lighthouse Tests
+      - name: Run Lighthouse Tests
         run: |
-          npx lighthouse https://recipe-book.harrisonholt.dev/login --output=json --output-path=results/lighthouse-results.json --only-categories=accessibility
+          npx lighthouse https://recipe-book.harrisonholt.dev/login --output=json --output-path=results/lighthouse-results.json
 
-      # Step 6: Run axe-core Accessibility Tests
+      # Step 7: Run axe-core Accessibility Tests
       - name: Run axe-core Accessibility Tests
         run: |
           npx axe https://recipe-book.harrisonholt.dev/login --save results/axe-results.json
 
-      # Step 7: Zip Accessibility Results
-      - name: Archive Accessibility Results
+      # Step 8: Zip All Results
+      - name: Archive All Test Results
         run: zip -r results.zip results/
       
-      # Step 8: Upload Accessibility Results as Artifact
-      - name: Upload Accessibility Results
+      # Step 9: Upload Results as Artifact
+      - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
-          name: accessibility-results
+          name: comprehensive-test-results
           path: results.zip

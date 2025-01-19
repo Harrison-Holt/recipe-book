@@ -1,7 +1,7 @@
 import Login from'./UI/Login.jsx'
 import Register from'./UI/Register.jsx'
 import { GlobalStyles, CssBaseline } from '@mui/material'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 const App = () => {
   return (
@@ -23,11 +23,9 @@ const App = () => {
   }}
   />
   <Router>
-    <Routes>
       <Route path='/login' element={< Login />} />
       <Route path='/register' element={< Register />} />
       <Route path='*' element={<Login />} />
-    </Routes>
   </Router>
   </>
   )

@@ -1,36 +1,28 @@
-import Login from'./UI/Login.jsx'
-import Register from'./UI/Register.jsx'
-import { GlobalStyles, CssBaseline } from '@mui/material'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './UI/Login.jsx';
+import Register from './UI/Register.jsx';
+import { CssBaseline, GlobalStyles } from '@mui/material';
 
 const App = () => {
   return (
-  <>
-  <CssBaseline />
-  <GlobalStyles
-  styles={{
-    'html, body': {
-      padding: 0, 
-      margin: 0, 
-      overflowX: 'hidden'
-    }, 
-    '#root': {
-      padding: 0, 
-      margin: 0, 
-      width: '100%', 
-      minHeight: '100vh'
-    }
-  }}
-  />
-  <Router>
-    <Routes>
-      <Route path='/login' element={< Login />} />
-      <Route path='/register' element={< Register />} />
-      <Route path='*' element={<Login />} />
-      </Routes>
-  </Router>
-  </>
-  )
-}
+    <>
+      <CssBaseline />
+      <GlobalStyles
+        styles={{
+          'html, body': { margin: 0, padding: 0 },
+          '#root': { minHeight: '100vh' },
+        }}
+      />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Login />} />
+        </Routes>
+      </Router>
+    </>
+  );
+};
 
-export default App 
+export default App;

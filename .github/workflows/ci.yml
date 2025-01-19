@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the Code
+      # Step 1: Checkout Repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
@@ -27,19 +27,23 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Run Accessibility Tests with Pa11y
-      - name: Run Pa11y Accessibility Tests
-        run: |
-          mkdir -p results
-          npm run test:accessibility --json > results/pa11y-results.json
+      # Step 4: Create Results Directory
+      - name: Create Results Directory
+        run: mkdir -p results
 
       # Step 5: Run Lighthouse Tests
       - name: Run Lighthouse Tests
         run: |
-          mkdir -p results
-          npx lighthouse https://recipe-book.harrisonholt.dev/login --output=json --output-path=results/lighthouse-results.json
+          npx lighthouse https://recipe-book.harrisonholt.dev/login \
+            --output=json \
+            --output-path=results/lighthouse-results.json \
+            --chrome-flags="--headless"
 
-      # Step 6: Upload Accessibility Results as Artifacts
+      # Step 6: Run Pa11y Accessibility Tests
+      - name: Run Pa11y Accessibility Tests
+        run: npm run test:accessibility --json > results/pa11y-results.json
+
+      # Step 7: Upload Results as Artifacts
       - name: Upload Accessibility Results
         uses: actions/upload-artifact@v3
         with:

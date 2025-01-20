@@ -19,12 +19,12 @@ const Home = () => {
             { /* Main Content */ }
             <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center', marginTop: '64px'}}>
             <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}> 
-                <Paper sx={{ width: '500px', height: '500px', backgroundImage: `url(${current_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <Typography variant='body1'>Card #1</Typography>
+                <Paper sx={{ width: '300px', height: '300px', backgroundImage: `url(${current_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <Typography variant='h2' sx={{ marginBottom: '20px' }}>Card #1</Typography>
                     <Button variant='contained'>View Current Recipes</Button>
                 </Paper>
-                <Paper sx={{ width: '500px', height: '500px', backgroundImage: `url(${my_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <Typography variant='body1'>Card #2</Typography>
+                <Paper sx={{ width: '300px', height: '300px', backgroundImage: `url(${my_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: '', alignItems: 'center'}}>
+                    <Typography variant='h2' sx={{ marginBottom: '20px' }}>Card #2</Typography>
                     <Button variant='contained'>View My Recipes</Button>
                 </Paper>
             </Box>

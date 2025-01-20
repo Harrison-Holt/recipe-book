@@ -14,9 +14,9 @@ const Home = () => {
             </AppBar>
 
             { /* Main Content */ }
-            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center', marginTop: '64px'}}>
+            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center', marginTop: '64px'}}>
                 <Typography variant='h2' sx={{ color: '#000'}}>Home</Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}> 
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}> 
                 <Paper sx={{ width: '500px', height: '500px'}}>
                     <Typography variant='body1'>Card #1</Typography>
                 </Paper>

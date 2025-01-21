@@ -1,143 +1,37 @@
-import { Typography, Paper, Button, Grid, Box } from '@mui/material';
+import {  Typography, Paper, Button, Grid, Box } from '@mui/material'
 
-const FeaturedRecipes = () => {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh', // Ensures the box takes the full viewport height
-        textAlign: 'center',
-      }}
-    >
-      <Grid
-        container
-        spacing={4} // Adds spacing between the grid items
-        sx={{
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        {/* Card 1 */}
-        <Grid item xs={12} sm={6} md={6}>
-          <Paper
-            sx={{
-              width: '350px',
-              height: '400px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                marginBottom: '20px',
-                backgroundColor: '#fff',
-                padding: '5px',
-                borderRadius: '4px',
-              }}
-            >
-              Card #1
-            </Typography>
-            <Button variant="contained" sx={{ backgroundColor: '#2EC698' }}>
-              View Current Recipes
-            </Button>
-          </Paper>
+const FeaturedReacipes = () => {
+
+    return (
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', width: '100%' }}>
+        <Grid container columns={2} spacing={4}       sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+        <Grid xs={12} sm={6} md={6}>
+        <Paper sx={{ width: '350px', height: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <Typography variant='h4' sx={{ marginBottom: '20px', backgroundColor: '#fff'}}>Card #1</Typography>
+        <Button variant='contained' sx={{ backgroundColor: '#2EC698'}}>View Current Recipes</Button>
+        </Paper>
         </Grid>
-
-        {/* Card 2 */}
-        <Grid item xs={12} sm={6} md={6}>
-          <Paper
-            sx={{
-              width: '350px',
-              height: '400px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                marginBottom: '20px',
-                backgroundColor: '#fff',
-                padding: '5px',
-                borderRadius: '4px',
-              }}
-            >
-              Card #2
-            </Typography>
-            <Button variant="contained" sx={{ backgroundColor: '#2EC698' }}>
-              View Current Recipes
-            </Button>
-          </Paper>
+        <Grid xs={12} sm={6} md={6}>
+        <Paper sx={{ width: '350px', height: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <Typography variant='h4' sx={{ marginBottom: '20px', backgroundColor: '#fff'}}>Card #1</Typography>
+        <Button variant='contained' sx={{ backgroundColor: '#2EC698'}}>View Current Recipes</Button>
+        </Paper>
         </Grid>
-
-        {/* Card 3 */}
-        <Grid item xs={12} sm={6} md={6}>
-          <Paper
-            sx={{
-              width: '350px',
-              height: '400px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                marginBottom: '20px',
-                backgroundColor: '#fff',
-                padding: '5px',
-                borderRadius: '4px',
-              }}
-            >
-              Card #3
-            </Typography>
-            <Button variant="contained" sx={{ backgroundColor: '#2EC698' }}>
-              View Current Recipes
-            </Button>
-          </Paper>
+        <Grid xs={12} sm={6} md={6}>
+        <Paper sx={{ width: '350px', height: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <Typography variant='h4' sx={{ marginBottom: '20px', backgroundColor: '#fff'}}>Card #1</Typography>
+        <Button variant='contained' sx={{ backgroundColor: '#2EC698'}}>View Current Recipes</Button>
+        </Paper>
         </Grid>
-
-        {/* Card 4 */}
-        <Grid item xs={12} sm={6} md={6}>
-          <Paper
-            sx={{
-              width: '350px',
-              height: '400px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                marginBottom: '20px',
-                backgroundColor: '#fff',
-                padding: '5px',
-                borderRadius: '4px',
-              }}
-            >
-              Card #4
-            </Typography>
-            <Button variant="contained" sx={{ backgroundColor: '#2EC698' }}>
-              View Current Recipes
-            </Button>
-          </Paper>
+        <Grid xs={12} sm={6} md={6}>
+        <Paper sx={{ width: '350px', height: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <Typography variant='h4' sx={{ marginBottom: '20px', backgroundColor: '#fff'}}>Card #1</Typography>
+        <Button variant='contained' sx={{ backgroundColor: '#2EC698'}}>View Current Recipes</Button>
+        </Paper>
         </Grid>
-      </Grid>
-    </Box>
-  );
-};
+        </Grid>
+        </Box>
+    )
+}
 
-export default FeaturedRecipes;
-
+export default FeaturedReacipes

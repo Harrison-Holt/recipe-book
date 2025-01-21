@@ -1,0 +1,6 @@
+https://recipe-book.harrisonholt.dev/login
+https://recipe-book.harrisonholt.dev/register
+https://recipe-book.harrisonholt.dev/
+https://recipe-book.harrisonholt.dev/my_recipes
+https://recipe-book.harrisonholt.dev/explore_recipes
+https://recipe-book.harrisonholt.dev/settings

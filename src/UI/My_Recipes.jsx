@@ -16,14 +16,14 @@ const My_Recipes = () => {
             </AppBar>
 
             { /* Main Content */ }
-            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center',  paddingTop: '50px', marginTop: '64px'}}>
+            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center',  paddingTop: '50px', marginTop: '64px'}}>
             <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' , marginTop: '100px' }}> 
                 <TextField
                     label='Enter Your Username'
                     variant='outlined'
                     sx={{ marginBottom: '25px'}}
                 />
-                <Button variant='contained' sx={{ backgroundColor: '#2EC698', width: '100%'}}>Search</Button>
+                <Button variant='contained' sx={{ backgroundColor: '#2EC698'}}>Search</Button>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' , marginTop: '100px' }}> 
 

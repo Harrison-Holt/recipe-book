@@ -5,7 +5,7 @@ const Footer = () => {
     return (
     <>
     <Box sx={{ backgroundColor: '#ECEDEF'}}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-start'}}>
             <Typography variant='body1' sx={{ color: '#000', fontFamily: 'merriweather'}}>&copy;2025 FlavorCraft</Typography>
             </Box>

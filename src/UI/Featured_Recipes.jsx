@@ -12,7 +12,8 @@ const FeaturedRecipes = () => {
     >
       <Grid
         container
-        spacing={4} // Adds spacing between grid items
+        columns={2}
+        spacing={4} 
         sx={{
           justifyContent: 'center', // Horizontal centering of grid items
         }}

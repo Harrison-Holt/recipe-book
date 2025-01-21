@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './UI/Login.jsx';
 import Register from './UI/Register.jsx';
 import Home from './UI/Home.jsx'
+import Settings from './UI/Settings.jsx'
 import { CssBaseline, GlobalStyles } from '@mui/material';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Router>
     </>

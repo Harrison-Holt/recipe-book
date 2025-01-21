@@ -13,7 +13,7 @@ const Footer = () => {
         </Box>
 
         {/* Button aligned to the right */}
-        <Button variant="contained" sx={{ backgroundColor: '#000', color: '#fff' }}>
+        <Button variant="contained" sx={{ backgroundColor: '#000', color: '#fff', marginRight: '100px'}}>
           Settings
         </Button>
       </Toolbar>

@@ -13,7 +13,7 @@ const App = () => {
       <CssBaseline />
       <GlobalStyles
         styles={{
-          'html, body': { margin: 0, padding: 0 },
+          'html, body': { margin: 0, padding: 0, overflowX: 'hidden' },
           '#root': { minHeight: '100vh' },
         }}
       />

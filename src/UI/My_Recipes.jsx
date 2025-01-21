@@ -19,7 +19,7 @@ const My_Recipes = () => {
             <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center',  paddingTop: '50px', marginTop: '64px'}}>
             <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' , marginTop: '100px' }}> 
                 <TextField
-                    label='Enter Your Username'
+                    label='Enter A Recipe Name'
                     variant='outlined'
                     sx={{ marginBottom: '25px'}}
                 />

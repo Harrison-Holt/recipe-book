@@ -1,4 +1,4 @@
-import { Box, AppBar, Toolbar, Typography } from '@mui/material'
+import { Box, AppBar, Toolbar, Typography, Button, TextField } from '@mui/material'
 import Footer from './Footer'
 import Background from '../../public/assets/kitchen_background.jpg'
 import Accordion from '@mui/material/Accordion';
@@ -19,7 +19,17 @@ const Exploring_Recipes = () => {
             </AppBar>
 
             { /* Main Content */ }
-            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', backgroundImage: `url(${Background})`, backgroundSize: 'cover',  paddingTop: '50px', marginTop: '64px'}}>
+            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover',  paddingTop: '50px', marginTop: '64px'}}>
+            
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' , marginTop: '100px' }}> 
+            <TextField
+                    label='Enter A Recipe Name'
+                    variant='outlined'
+                    sx={{ marginBottom: '25px'}}
+                />
+                <Button variant='contained' sx={{ backgroundColor: '#2EC698'}}>Search</Button>
+            </Box>
+
             <Accordion>
         <AccordionSummary
           expandIcon={<ArrowDropDownIcon />}

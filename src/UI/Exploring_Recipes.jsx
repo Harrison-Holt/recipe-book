@@ -6,7 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-const Settings = () => {
+const Exploring_Recipes = () => {
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -102,4 +102,4 @@ const Settings = () => {
     )
 }
 
-export default Settings
+export default Exploring_Recipes

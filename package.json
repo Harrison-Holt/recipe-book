@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:accessibility": "pa11y --config pa11y-config.json < urls.txt || true"
+  "test:accessibility": "pa11y https://recipe-book.harrisonholt.dev/login --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/register --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/ --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/my_recipes --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/explore_recipes --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/settings --config pa11y-config.json || true"
+
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

@@ -7,22 +7,21 @@ const FeaturedRecipes = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '100vh', // Ensures full vertical centering
+        minHeight: '100vh', // Centers vertically and horizontally
       }}
     >
       <Grid
         container
-        columns={2}
-        spacing={4} 
+        spacing={3} // Adds spacing between grid items
         sx={{
-          justifyContent: 'center', // Horizontal centering of grid items
+          maxWidth: '800px', // Restrict grid width for proper alignment
         }}
       >
         {/* Card 1 */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper
             sx={{
-              width: '350px',
+              width: '100%',
               height: '400px',
               display: 'flex',
               flexDirection: 'column',
@@ -48,10 +47,10 @@ const FeaturedRecipes = () => {
         </Grid>
 
         {/* Card 2 */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper
             sx={{
-              width: '350px',
+              width: '100%',
               height: '400px',
               display: 'flex',
               flexDirection: 'column',
@@ -77,10 +76,10 @@ const FeaturedRecipes = () => {
         </Grid>
 
         {/* Card 3 */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper
             sx={{
-              width: '350px',
+              width: '100%',
               height: '400px',
               display: 'flex',
               flexDirection: 'column',
@@ -106,10 +105,10 @@ const FeaturedRecipes = () => {
         </Grid>
 
         {/* Card 4 */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper
             sx={{
-              width: '350px',
+              width: '100%',
               height: '400px',
               display: 'flex',
               flexDirection: 'column',
@@ -139,4 +138,3 @@ const FeaturedRecipes = () => {
 };
 
 export default FeaturedRecipes;
-

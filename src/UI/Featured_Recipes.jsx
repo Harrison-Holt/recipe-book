@@ -1,4 +1,4 @@
-import {  Typography, Paper, Button, Grid } from '@mui/material'
+import {  Typography, Paper, Button, Grid, Box } from '@mui/material'
 
 const FeaturedReacipes = () => {
 

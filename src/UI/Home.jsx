@@ -18,7 +18,7 @@ const Home = () => {
             </AppBar>
 
             { /* Main Content */ }
-            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center',  paddingTop: '50px'}}>
+            <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center',  paddingTop: '50px', marginTop: '64px'}}>
             <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}> 
                 <Paper sx={{ width: '350px', height: '400px', backgroundImage: `url(${current_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <Typography variant='h4' sx={{ marginBottom: '20px', backgroundColor: '#fff'}}>Card #1</Typography>
@@ -29,11 +29,11 @@ const Home = () => {
                     <Button variant='contained'  sx={{ backgroundColor: '#2EC698'}}>View My Recipes</Button>
                 </Paper>
             </Box>
-            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' , }}> 
+            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' , marginTop: '100px' }}> 
 
                 <Typography variant='h3' sx={{ fontSize: '32px', color: '#000', textAlign: 'center', marginTop: '50px'}}>Featured Recipes</Typography>
 
-                <FeaturedReacipes sx={{ marginTop: '100px' }} />
+                <FeaturedReacipes />
             </Box>
             </Box>
     

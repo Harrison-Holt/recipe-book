@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-  "test:accessibility": "pa11y https://recipe-book.harrisonholt.dev/login --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/register --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/ --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/my_recipes --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/explore_recipes --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/settings --config pa11y-config.json || true"
-
+    "test:accessibility": "pa11y https://recipe-book.harrisonholt.dev/login --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/register --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/ --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/my_recipes --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/explore_recipes --config pa11y-config.json || true && pa11y https://recipe-book.harrisonholt.dev/settings --config pa11y-config.json || true"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -19,6 +18,9 @@
     "@fontsource/poppins": "^5.1.1",
     "@mui/icons-material": "^6.4.0",
     "@mui/material": "^6.4.0",
+    "amazon-cognito-identity-js": "^6.3.12",
+    "aws-sdk": "^2.1692.0",
+    "mysql2": "^3.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.2"

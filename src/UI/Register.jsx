@@ -24,19 +24,17 @@ const Register = () => {
         const clientSecret = "3ve2ub2g7k71rmb5hcka2id4c6e53q9erdhnvjbct9drip76hle"; 
     
         // Ensure AWS Cognito recognizes username & email attributes
-        const attributes = [
-            { Name: "email", Value: email }
-        ];
-                const secretHash = generateSecretHash(username, clientId, clientSecret);
+        const attributes = [{ Name: "email", Value: email }];
+        const secretHash = generateSecretHash(username, clientId, clientSecret);
     
-
-    userPool.signUp(username, password, attributes, { SecretHash: secretHash }, null, (err, data) => {
-        if (err) {
-            setMessage(err.message);
-        } else {
-            setMessage("Registration successful! Check your email for verification.");
-        }
-    });
+        userPool.signUp(username, password, attributes, { SecretHash: secretHash }, (err, data) => {
+            if (err) {
+                setMessage(err.message);
+            } else {
+                setMessage("Registration successful! Check your email for verification.");
+            }
+        });
+    };
     
 
     return (

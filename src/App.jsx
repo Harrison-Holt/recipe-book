@@ -7,6 +7,8 @@ import Exploring_Recipes from './UI/Exploring_Recipes.jsx';
 import My_Recipes from './UI/My_Recipes.jsx';
 import { CssBaseline, GlobalStyles } from '@mui/material';
 
+console.log("Home Component:", Home);
+
 const App = () => {
   return (
     <>

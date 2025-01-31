@@ -90,7 +90,7 @@ const Register = () => {
                         />
                         <TextField
                             label="Enter Your Password"
-                            type="password" // ✅ Hides password input
+                            type="password" 
                             variant="outlined"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}

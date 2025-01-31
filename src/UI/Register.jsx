@@ -4,8 +4,16 @@ import Footer from './Footer.jsx';
 import kitchenBackground from '../../public/assets/kitchen_background.jpg';
 import { useState } from 'react';
 import userPool from '../aws_config/Cognito';
+import crypto from "crypto";
+import base64 from "base-64";
 
-console.log(userPool); 
+function generateSecretHash(username, clientId, clientSecret) {
+    return base64.encode(
+        crypto.createHmac("sha256", clientSecret)
+              .update(username + clientId)
+              .digest("base64")
+    );
+}
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -15,18 +23,23 @@ const Register = () => {
 
     const handle_registration = (event) => {
         event.preventDefault();
-
+    
+        const clientId = "42qk69ucev7p5j7jt7dpjtlisa"; 
+        const clientSecret = "3ve2ub2g7k71rmb5hcka2id4c6e53q9erdhnvjbct9drip76hle"; 
+    
         // Ensure AWS Cognito recognizes username & email attributes
-        const attributes = [{ Name: 'email', Value: email }];
-
-        userPool.signUp(username, password, attributes, null, (err, data) => {
+        const attributes = [{ Name: "email", Value: email }];
+        const secretHash = generateSecretHash(username, clientId, clientSecret);
+    
+        userPool.signUp(username, password, attributes, { SecretHash: secretHash }, (err, data) => {
             if (err) {
                 setMessage(err.message);
             } else {
-                setMessage('Registration successful! Check your email for verification.');
+                setMessage("Registration successful! Check your email for verification.");
             }
         });
     };
+    ;
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>

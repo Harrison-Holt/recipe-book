@@ -29,15 +29,15 @@ const Register = () => {
         ];
                 const secretHash = generateSecretHash(username, clientId, clientSecret);
     
-                userPool.signUp(username, password, attributes, null, (err, data) => {
-                    if (err) {
-                        setMessage(err.message);
-                    } else {
-                        setMessage("Registration successful! Check your email for verification.");
-                    }
-                });                
-    };
-    ;
+
+    userPool.signUp(username, password, attributes, { SecretHash: secretHash }, null, (err, data) => {
+        if (err) {
+            setMessage(err.message);
+        } else {
+            setMessage("Registration successful! Check your email for verification.");
+        }
+    });
+    
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>

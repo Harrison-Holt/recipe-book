@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer.jsx';
 import kitchenBackground from '../../public/assets/kitchen_background.jpg';
 import { useState } from 'react';
-import userPool from '../aws_config/Cognito.js';
+import userPool from '../aws_config/Cognito';
+
+console.log(userPool); 
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -51,7 +53,7 @@ const Register = () => {
                 }}
             >
                 <Paper
-                    component="form" // ✅ Fixed the typo
+                    component="form" 
                     onSubmit={handle_registration}
                     sx={{
                         backgroundColor: '#ECEDEF',

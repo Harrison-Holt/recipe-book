@@ -1,10 +1,11 @@
 import Footer from './Footer.jsx'
-import Background from '../../public/assets/kitchen_background.jpg'
-import current_recipes from '../../public/assets/current_reciepes_background.jpg'
-import my_recipes from '../../public/assets/my_recipes_background.jpg'
 import { AppBar, Toolbar, Typography, Box, Paper } from '@mui/material'
 import FeaturedRecipes from './Featured_Recipes.jsx'
-import { Link } from 'react'
+import { Link } from 'react-router-dom';
+
+const Background = '/assets/kitchen_background.jpg';
+const current_recipes = '/assets/current_reciepes_background.jpg';
+const my_recipes = '/assets/my_recipes_background.jpg';
 
 const Home = () => {
 
@@ -23,11 +24,15 @@ const Home = () => {
             <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}> 
                 <Paper sx={{ width: '350px', height: '400px', backgroundImage: `url(${current_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <Typography variant='h4' sx={{ marginBottom: '20px', backgroundColor: '#fff'}}>Card #1</Typography>
-                    <Link variant='contained' to="./Exploring_Recipes.jsx" sx={{ backgroundColor: '#2EC698'}}>View Current Recipes</Link>
+                    <Link to="/explore_recipes" style={{ textDecoration: 'none', color: 'white', padding: '10px', backgroundColor: '#2EC698', borderRadius: '5px' }}>
+                    View Current Recipes
+                </Link>
                 </Paper>
                 <Paper sx={{ width: '350px', height: '400px', backgroundImage: `url(${my_recipes})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <Typography variant='h4' sx={{ marginBottom: '20px', color: '#000', backgroundColor: '#fff'}}>Card #2</Typography>
-                    <Link variant='contained'  to="./My_Recipes.jsx" sx={{ backgroundColor: '#2EC698'}}>View My Recipes</Link>
+                    <Link to="/my_recipes" style={{ textDecoration: 'none', color: 'white', padding: '10px', backgroundColor: '#2EC698', borderRadius: '5px' }}>
+                    View My Recipes
+                </Link>
                 </Paper>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' , marginTop: '100px' }}> 

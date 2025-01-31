@@ -4,16 +4,12 @@ import Footer from './Footer.jsx';
 import kitchenBackground from '../../public/assets/kitchen_background.jpg';
 import { useState } from 'react';
 import userPool from '../aws_config/Cognito';
-import crypto from "crypto";
-import base64 from "base-64";
+import CryptoJS from "crypto-js";
 
 function generateSecretHash(username, clientId, clientSecret) {
-    return base64.encode(
-        crypto.createHmac("sha256", clientSecret)
-              .update(username + clientId)
-              .digest("base64")
-    );
+    return CryptoJS.HmacSHA256(username + clientId, clientSecret).toString(CryptoJS.enc.Base64);
 }
+
 
 const Register = () => {
     const [email, setEmail] = useState('');
